@@ -19,5 +19,8 @@ do
     tmux send-keys -t $SESSION_NAME:$((i+1)) "export CUDA_VISIBLE_DEVICES=$i" C-m
 done
 
+# Create a misc. window
+tmux new-window -t $SESSION_NAME -n "misc"
+
 # Attach to the tmux session
 tmux attach -t $SESSION_NAME
