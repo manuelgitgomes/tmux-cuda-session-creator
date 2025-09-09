@@ -4,7 +4,12 @@
 NUM_GPUS=$(nvidia-smi --query-gpu=name --format=csv,noheader | wc -l)
 
 # Create a new tmux session
-SESSION_NAME="train"
+DEFAULT_SESSION_NAME="train"
+
+SESSION_NAME=${1:-$DEFAULT_SESSION_NAME}
+
+echo $1
+
 tmux new-session -d -s $SESSION_NAME
 
 # Create the first window for nvidia-smi
