@@ -14,3 +14,13 @@ To use it, just run the script:
 ```bash
 ./tmux-creator.sh
 ```
+
+If you want to add the script as a global binary, you can run the setup script:
+```bash
+./setup.sh
+```
+
+This will create a symlink to the script in `~/.local/bin/tmux-creator`, so you can run it from anywhere by just typing:
+```bash
+tmux-creator
+```
